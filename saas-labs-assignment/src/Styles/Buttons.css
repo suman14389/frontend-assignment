@@ -1,0 +1,17 @@
+.paginated-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.paginated-buttons button {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.active-page {
+  background-color: #3fae6c;
+  color: white;
+}
