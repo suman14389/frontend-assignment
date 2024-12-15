@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "./Table";
+import TableShimmer from "./TableShimmer";
 
 const TableRenderer = ({ isLoading, tableData }) => {
   return (
@@ -14,7 +15,7 @@ const TableRenderer = ({ isLoading, tableData }) => {
         </Table.Head>
         <Table.Body>
           {isLoading ? (
-            <div>Loading...</div>
+            <TableShimmer numberOfRows={5} />
           ) : (
             tableData.map((row) => (
               <Table.Row key={row.id}>

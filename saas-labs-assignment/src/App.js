@@ -16,7 +16,6 @@ function App() {
     const startIndex = (currentPage - 1) * 5;
     const endIndex = startIndex + 5;
     currentPageData = tableData.slice(startIndex, endIndex);
-    console.log(currentPageData);
   }
 
   const handleCurrentPage = (page) => {
