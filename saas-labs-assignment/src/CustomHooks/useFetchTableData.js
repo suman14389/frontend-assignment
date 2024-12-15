@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
+import { TABLE_API_URL } from "../Constants";
 
 const useFetchTableData = () => {
   const [tableData, setTableData] = useState([]);
   const [isDataLoading, setIsDataLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      " https://raw.githubusercontent.com/saaslabsco/frontend-assignment/refs/heads/master/frontend-assignment.json"
-    )
+    fetch(TABLE_API_URL)
       .then((res) => res.json())
       .then((data) => {
         setIsDataLoading(false);
