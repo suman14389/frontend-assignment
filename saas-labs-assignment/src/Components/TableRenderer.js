@@ -17,8 +17,8 @@ const TableRenderer = ({ isLoading, tableData }) => {
           {isLoading ? (
             <TableShimmer numberOfRows={5} />
           ) : (
-            tableData.map((row) => (
-              <Table.Row key={row.id}>
+            tableData.map((row, index) => (
+              <Table.Row key={row.id || index}>
                 <Table.Cell>{row["s.no"] + 1}</Table.Cell>
                 <Table.Cell>{row["percentage.funded"]}</Table.Cell>
                 <Table.Cell>{row["amt.pledged"]}</Table.Cell>
