@@ -1,17 +1,46 @@
 .paginated-buttons {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 25px;
+  padding-right: 80px;
 }
 
 .paginated-buttons button {
   padding: 4px 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #000000;
+  color: #ffffff;
   cursor: pointer;
 }
 
-.active-page {
-  background-color: #3fae6c;
+#previous-btn {
+  background-color: #686565;
+}
+
+#next-btn {
+  background-color: #686565;
+}
+
+.paginated-buttons button.active-page {
+  background-color: #1e9d4f !important;
   color: white;
+}
+
+.paginated-buttons button:hover {
+  background-color: #b7238b;
+}
+
+.paginated-buttons button:disabled {
+  background-color: #e5dfdf !important;
+  color: #000000;
+  cursor: not-allowed;
+}
+
+.page-number-text {
+  font-size: 14px;
+  padding-right: 50px;
+  margin-top: 10px;
+  color: rgb(243, 38, 212);
+  font-weight: 600;
 }

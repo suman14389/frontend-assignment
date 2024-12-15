@@ -24,6 +24,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <h1>Highly-rated kickstarter projects </h1>
       <TableRenderer isLoading={isLoading} tableData={currentPageData} />
       <PaginatedButtons
         numberOfPages={numberOfPages}

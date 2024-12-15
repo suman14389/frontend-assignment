@@ -34,26 +34,34 @@ const PaginatedButtons = ({ numberOfPages, currentPage, setCurrentPage }) => {
   };
 
   return (
-    <div className="paginated-buttons">
-      <button disabled={startPage === 1} onClick={handleClickPreviousBtn}>
-        Previous
-      </button>
-      {getVisibleButtons().map((pageNum) => (
+    <>
+      <div className="paginated-buttons">
         <button
-          key={pageNum}
-          className={currentPage === pageNum ? "active-page" : ""}
-          onClick={() => setCurrentPage(pageNum)}
+          disabled={startPage === 1}
+          onClick={handleClickPreviousBtn}
+          id="previous-btn"
         >
-          {pageNum}
+          Previous
         </button>
-      ))}
-      <button
-        disabled={startPage + VISIBLE_PAGES > numberOfPages}
-        onClick={handleClickNextBtn}
-      >
-        Next
-      </button>
-    </div>
+        {getVisibleButtons().map((pageNum) => (
+          <button
+            key={pageNum}
+            className={currentPage === pageNum ? "active-page" : ""}
+            onClick={() => setCurrentPage(pageNum)}
+          >
+            {pageNum}
+          </button>
+        ))}
+        <button
+          disabled={startPage + VISIBLE_PAGES > numberOfPages}
+          onClick={handleClickNextBtn}
+          id="next-btn"
+        >
+          Next
+        </button>
+      </div>
+      <span className="page-number-text">Current Page: {currentPage}</span>
+    </>
   );
 };
 
